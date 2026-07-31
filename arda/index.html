@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Arda Akkaya, Verkauf &amp; Beratung bei AKKAYA Bauelemente GmbH in Hagen - Kontakt speichern, anrufen, Standorte und Anfrage.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a1b38">
+<meta property="og:title" content="Arda Akkaya - AKKAYA Bauelemente GmbH">
+<meta property="og:description" content="Sanitär · Heizung · Bad in Hagen. Kontakt speichern, anrufen, Anfrage stellen.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://karte.akkaya-bauelemente.de/arda/">
+<title>Arda Akkaya — AKKAYA Bauelemente GmbH</title>
+<style>
+  /* Fassung A — bewusst festgelegt, folgt NICHT der Handy-Einstellung.
+     Begründung: die gedruckte Karte ist vorne Navy, hinten weiß.
+     Die digitale Karte muss dasselbe Objekt sein, auf jedem Gerät. */
+
+  :root {
+    color-scheme: light;
+
+    --navy: #0a1b38;
+    --rot: #c72e3a;
+    --grund: #f5f6f8;
+    --flaeche: #ffffff;
+    --text: #1a1d23;
+    --leise: #6b7079;
+    --linie: #e3e5ea;
+    --marke-bg: rgba(10, 27, 56, .07);
+    --rolle-bg: rgba(199, 46, 58, .1);
+    --schatten: 0 1px 2px rgba(10, 27, 56, .06), 0 8px 24px rgba(10, 27, 56, .07);
+  }
+
+  html, body { background: var(--grund); }
+
+  body {
+    margin: 0;
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  .blatt {
+    max-width: 430px;
+    margin: 0 auto;
+    padding: 0 16px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  /* ── Kopf: die Vorderseite der gedruckten Karte ───────────────── */
+
+  .kopf {
+    margin-top: 16px;
+    border-radius: 20px;
+    background: linear-gradient(105deg, #0a1b38 0%, #3a1c3c 48%, #c72e3a 100%);
+    padding: 34px 24px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    overflow: hidden;
+  }
+
+  .kopf svg { width: 84px; height: 84px; display: block; }
+
+  .tagline {
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    opacity: .92;
+    margin: 0;
+  }
+
+  /* ── Identität ────────────────────────────────────────────────── */
+
+  .ich {
+    background: var(--flaeche);
+    border-radius: 20px;
+    box-shadow: var(--schatten);
+    padding: 22px 22px 20px;
+    margin-top: -34px;
+    position: relative;
+    text-align: center;
+  }
+
+  .ich h1 {
+    font-size: 26px;
+    font-weight: 650;
+    letter-spacing: -.02em;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .rolle {
+    display: inline-block;
+    margin: 10px 0 0;
+    padding: 5px 14px;
+    border-radius: 999px;
+    background: var(--rolle-bg);
+    color: var(--rot);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .firma { margin: 12px 0 0; font-size: 15px; color: var(--leise); }
+
+  /* ── Aktionen ─────────────────────────────────────────────────── */
+
+  .speichern {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 14px;
+    background: var(--rot);
+    color: #fff;
+    font: inherit;
+    font-size: 17px;
+    font-weight: 640;
+    padding: 17px 20px;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(199, 46, 58, .28);
+    transition: filter .12s ease, transform .12s ease;
+  }
+
+  .speichern:hover { filter: brightness(1.08); }
+  .speichern:active { transform: scale(.985); }
+
+  .dreier { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+  .dreier a {
+    background: var(--flaeche);
+    border-radius: 14px;
+    box-shadow: var(--schatten);
+    padding: 15px 8px 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 560;
+    transition: transform .12s ease;
+  }
+
+  .dreier a:active { transform: scale(.97); }
+  .dreier svg { width: 21px; height: 21px; stroke: var(--navy); }
+
+  /* ── Listen ───────────────────────────────────────────────────── */
+
+  .block {
+    background: var(--flaeche);
+    border-radius: 20px;
+    box-shadow: var(--schatten);
+    overflow: hidden;
+  }
+
+  .titel {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--leise);
+    padding: 16px 20px 8px;
+    margin: 0;
+  }
+
+  .zeile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 20px;
+    text-decoration: none;
+    color: var(--text);
+    border-top: 1px solid var(--linie);
+  }
+
+  .titel + .zeile { border-top: 0; }
+  .zeile:hover { background: rgba(10, 27, 56, .035); }
+
+  .marke {
+    flex: 0 0 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: var(--marke-bg);
+    color: var(--navy);
+  }
+
+  .marke svg { width: 18px; height: 18px; }
+
+  .inhalt { min-width: 0; flex: 1; }
+  .inhalt b { display: block; font-size: 15px; font-weight: 580; }
+  .inhalt span { display: block; font-size: 13px; color: var(--leise); }
+  .zahl { font-variant-numeric: tabular-nums; }
+  .pfeil { flex: 0 0 auto; opacity: .35; }
+
+  .offen {
+    flex: 0 0 auto;
+    font-size: 11px;
+    font-weight: 650;
+    padding: 4px 9px;
+    border-radius: 999px;
+    background: rgba(138, 143, 152, .18);
+    color: var(--leise);
+  }
+
+  .fuss {
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--leise);
+    padding: 6px 12px 0;
+  }
+
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--rot);
+    outline-offset: 3px;
+    border-radius: 10px;
+  }
+
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+</head>
+<body>
+<div class="blatt">
+
+  <header class="kopf">
+    <svg viewBox="0 0 2000 2000" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AKKAYA Bauelemente">
+      <g fill="#fff">
+        <path d="M984.56,1553.64c0,64.6-53.38,116.97-119.21,116.97s-119.24-52.37-119.24-116.97v-943.85c48.26.56,81.87,56.94,83.47,113.43v679.19c0,13.11,1.76,25.9,5.09,38.17,17.24,63.94,76.72,113.06,149.89,113.06Z"/>
+        <path d="M684.25,446.36v87.87c-18.04,0-35.09,2.82-50.85,7.95-12.46,4.07-24.11,9.6-34.75,16.42-42.65,27.19-69.38,74.33-69.38,126.85v706.5c0,22.15-5.52,41.39-15.94,56.22-8.88,12.76-21.43,22.24-37.16,27.44-9.1,3.07-19.24,4.66-30.37,4.66V446.36c0-64.6,53.38-116.97,119.24-116.97s119.21,52.37,119.21,116.97Z"/>
+        <path d="M684.25,609.79v943.85c0,64.6-53.38,116.97-119.21,116.97s-119.24-52.37-119.24-116.97v-.56c77.34-.59,136.05-47.64,151.16-112.15,2.53-10.7,3.82-21.87,3.82-33.38.06-173.18.03-459.15,0-684.32,0-58.53,34.69-112.9,83.47-113.43Z"/>
+        <path d="M1284.86,446.36v1107.27c-.31,64.35-53.56,116.41-119.24,116.41s-118.9-52.06-119.21-116.41v-1.25c75.39.56,132.99-47.86,151.37-111.93,4.1-14.17,6.26-29.16,6.26-44.52V467.04c0-7.85-3.05-15.02-8.2-20.68-6.81-7.48-17.21-12.26-28.89-12.26s-22.05,4.79-28.83,12.26c-5.15,5.66-8.23,12.83-8.23,20.68v924.92c0,22.02-5.86,41.17-16.47,55.93-9.03,12.73-21.58,22.21-36.91,27.53-9.1,3.16-19.18,4.85-30.1,4.85V446.36c0-64.6,53.38-116.97,119.21-116.97s119.24,52.37,119.24,116.97Z"/>
+        <path d="M300.5,1391.96V467.04c0-7.85-3.08-15.02-8.23-20.68-6.78-7.48-17.21-12.26-28.86-12.26s-22.08,4.79-28.86,12.26c-5.15,5.66-8.23,12.83-8.23,20.68v930.12c0,15.08,2.19,29.81,6.32,43.8,18.59,63.16,76.66,111.65,151.31,112.68,0,64.6-53.38,116.97-119.21,116.97s-119.24-52.37-119.24-116.97V446.36c0-64.6,53.38-116.97,119.24-116.97s119.21,52.37,119.21,116.97v1033.91c-11.13,0-21.21-1.53-30.22-4.47-16.19-5.19-28.89-14.83-37.77-27.84-10.18-14.8-15.45-33.97-15.45-56Z"/>
+        <path d="M984.56,446.36v1033.91c-11.16,0-21.49-1.75-30.77-5.1-14.68-5.22-26.8-14.33-35.65-26.47h-.03c-10.95-14.86-17.02-34.32-17.02-56.75v-706.5c0-52.65-28.71-100.61-72.53-127.82-9.4-5.82-19.49-10.7-30.13-14.45-16.28-5.79-33.89-8.95-52.33-8.95v-87.87c0-64.6,53.38-116.97,119.24-116.97s119.21,52.37,119.21,116.97Z"/>
+        <path d="M1854.51,823.67c0,16.92-13.97,30.63-31.17,30.63h-497.84v-61.28h497.84c17.2,0,31.17,13.73,31.17,30.66Z"/>
+        <path d="M1325.5,877.38v197.24h273.76c78.2-1.25,179.74-94.79,207.28-197.24h-481.04ZM1720.79,942.36c-37.28,34.41-74.19,60.22-110.7,76.43-7.03,4.85-16.62,3-21.43-4.13l-.4-.66c-4.81-7.13-2.99-16.86,4.07-21.71,47.12-12.58,84.4-37.6,110.7-76.43,7.03-4.85,16.62-3,21.43,4.13l.4.66c4.81,7.13,2.99,16.86-4.07,21.71Z"/>
+        <path d="M1376.38,714.65v51.62h-50.88v-51.62c0-15.49,11.38-28.06,25.44-28.06s25.44,12.58,25.44,28.06Z"/>
+        <path d="M1553.27,714.65v51.62h-50.88v-51.62c0-15.49,11.38-28.06,25.44-28.06s25.44,12.58,25.44,28.06Z"/>
+        <path d="M1664.6,589.2h-61.49c-.19-16.33-8.05-32.66-22.6-32.66h-102.84v209.72h-76.56v-260.93h179.4c45.73-.78,87.54,36.07,84.09,83.87Z"/>
+        <rect x="1603.11" y="605.37" width="61.69" height="29.63"/>
+        <path d="M1401.11,486.45v-40.67c1.36-16.21,9.24-25.37,26.54-27.98l165.31-18.94s6.65,1.84,7.02,11.99c.71,19.25-53.96,18.77-90.79,19.12-14.52,1.09-31.69-.35-31.69,12.69l-.51,43.8h-75.88Z"/>
+        <path d="M1584.49,1099.31v28.91c0,7.98-3.21,15.2-8.36,20.43-5.15,5.22-12.27,8.48-20.14,8.48h-13.23v155.38c0,53.87-47.39,98.45-101.08,98.45h-113.14v-68.82h113.14c22.63-.16,33.24-8.54,33.24-29.63v-155.38h-13.04c-15.73,0-28.49-12.95-28.49-28.91v-28.91h151.09Z"/>
+      </g>
+    </svg>
+    <p class="tagline">Sanitär · Heizung · Bad</p>
+  </header>
+
+  <section class="ich">
+    <h1>Arda Akkaya</h1>
+    <div class="rolle">Verkauf &amp; Beratung</div>
+    <p class="firma">AKKAYA Bauelemente GmbH</p>
+  </section>
+
+  <button class="speichern" id="vcard" type="button">
+    <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+      <path d="M17 21v-8H7v8M7 3v5h8"/>
+    </svg>
+    Kontakt speichern
+  </button>
+
+  <nav class="dreier">
+    <a href="tel:+491726343979">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2z"/></svg>
+      Anrufen
+    </a>
+    <a href="https://wa.me/491726343979">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.6 7.3L3 20.5l1.8-5.2A8.4 8.4 0 1 1 21 11.5z"/></svg>
+      WhatsApp
+    </a>
+    <a href="mailto:info@akkaya-bauelemente.de">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg>
+      E-Mail
+    </a>
+  </nav>
+
+  <section class="block">
+    <p class="titel">Kontakt</p>
+
+    <a class="zeile" href="tel:+491726343979">
+      <span class="marke"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.4 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2z"/></svg></span>
+      <span class="inhalt"><b class="zahl">+49 172 6343979</b><span>Mo–Fr 8:30–17:30 · Sa 10–14</span></span>
+    </a>
+
+    <a class="zeile" href="mailto:info@akkaya-bauelemente.de">
+      <span class="marke"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></span>
+      <span class="inhalt"><b>info@akkaya-bauelemente.de</b><span>Antwort meist am selben Tag</span></span>
+    </a>
+
+  </section>
+
+  <section class="block">
+    <p class="titel">Standorte</p>
+
+    <a class="zeile" href="https://www.google.com/maps/search/?api=1&amp;query=Eilper%20Stra%C3%9Fe%2029%2C%2058091%20Hagen">
+      <span class="marke"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg></span>
+      <span class="inhalt"><b>Laden — Eilper Straße 29</b><span class="zahl">58091 Hagen · Beratung und kleine Teile</span></span>
+      <svg class="pfeil" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+
+    <a class="zeile" href="https://www.google.com/maps/search/?api=1&amp;query=Im%20M%C3%BChlenwert%2020-22%2C%2058135%20Hagen">
+      <span class="marke"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M4 21V10l8-4 8 4v11"/><rect x="9" y="14" width="6" height="7" rx="1"/></svg></span>
+      <span class="inhalt"><b>Lager — Im Mühlenwert 20-22</b><span class="zahl">58135 Hagen · Abholung Heizkörper</span></span>
+      <svg class="pfeil" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+  </section>
+
+  <section class="block">
+    <p class="titel">Heizkörper &amp; Zubehör</p>
+
+    <a class="zeile" href="https://hagener-heizungsdiscount.de">
+      <span class="marke"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h3l2.2 11.5a2 2 0 0 0 2 1.6h7.4a2 2 0 0 0 2-1.5L22 8H7"/><circle cx="10.5" cy="20" r="1.2"/><circle cx="18.5" cy="20" r="1.2"/></svg></span>
+      <span class="inhalt"><b>Preis anfragen</b><span>Größe wählen, Liste schicken, Preis bekommen</span></span>
+      <svg class="pfeil" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+
+    <a class="zeile" href="https://www.kleinanzeigen.de/pro/Akkaya-Bauelemente">
+      <span class="marke"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="15" rx="2.5"/><path d="M3 9.5h18M8 14h8"/></svg></span>
+      <span class="inhalt"><b>Unsere Anzeigen</b><span>kleinanzeigen.de</span></span>
+      <svg class="pfeil" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+  </section>
+
+  <section class="block">
+    <p class="titel">Folgen &amp; bewerten</p>
+
+    <a class="zeile" href="#">
+      <span class="marke"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3.5 2.6 5.4 5.9.8-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.7l5.9-.8z"/></svg></span>
+      <span class="inhalt"><b>Bei Google bewerten</b><span>Dauert 20 Sekunden</span></span>
+      <span class="offen">Link fehlt</span>
+    </a>
+
+    <a class="zeile" href="https://www.instagram.com/akkaya.bauelemente">
+      <span class="marke"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".9" fill="currentColor" stroke="none"/></svg></span>
+      <span class="inhalt"><b>Instagram</b><span>@akkaya.bauelemente</span></span>
+      <svg class="pfeil" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </a>
+  </section>
+
+  <p class="fuss">
+    AKKAYA Bauelemente GmbH · Eilper Straße 29, 58091 Hagen<br>
+    Amtsgericht Hagen HRB 13341 · Geschäftsführer Arda Akkaya
+  </p>
+
+</div>
+
+<script>
+  (function () {
+    var vcard = [
+      "BEGIN:VCARD",
+      "VERSION:3.0",
+      "N:Akkaya;Arda;;;",
+      "FN:Arda Akkaya",
+      "ORG:AKKAYA Bauelemente GmbH",
+      "TITLE:Verkauf und Beratung",
+      "TEL;TYPE=WORK,VOICE:+491726343979",
+      "EMAIL;TYPE=WORK:info@akkaya-bauelemente.de",
+      "ADR;TYPE=WORK:;;Eilper Strasse 29;Hagen;;58091;Deutschland",
+      "URL:https://akkaya-bauelemente.de",
+      "END:VCARD"
+    ].join("\r\n");
+
+    document.getElementById("vcard").addEventListener("click", function () {
+      var blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "Arda-Akkaya.vcf";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function () { URL.revokeObjectURL(a.href); }, 4000);
+    });
+  })();
+</script>
+</body>
+</html>
