@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Seite nicht gefunden — AKKAYA Bauelemente GmbH</title>
+<meta name="robots" content="noindex">
+<script>
+  // Rettungsnetz: GitHub Pages unterscheidet Gross- und Kleinschreibung im
+  // Pfad. Wer /ILHAMI aufruft (etwa von einem alten QR), landete sonst hier.
+  // Ein Pfad, der sich nur durch Grossbuchstaben unterscheidet, wird still
+  // auf die richtige Adresse umgeleitet.
+  (function () {
+    var p = location.pathname;
+    var klein = p.toLowerCase();
+    if (klein !== p) { location.replace(klein + location.search + location.hash); }
+  })();
+</script>
+<style>
+  body { margin:0; padding:48px 20px; background:#f5f6f8; color:#1a1d23; line-height:1.6;
+         font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; }
+  .k { max-width:420px; margin:0 auto; }
+  h1 { font-size:22px; letter-spacing:-.02em; margin:0 0 8px; }
+  p { color:#6b7079; margin:0 0 20px; }
+  a { color:#c72e3a; font-weight:600; }
+  ul { padding-left:18px; }
+  li { margin-bottom:6px; }
+</style>
+</head>
+<body>
+<div class="k">
+  <h1>Diese Seite gibt es nicht</h1>
+  <p>Vielleicht war ein Buchstabe zu viel. Hier geht es weiter:</p>
+  <ul>
+    <li><a href="/ilhami/">Ilhami Akkaya</a></li>
+    <li><a href="/siyar/">Siyar Akkaya</a></li>
+    <li><a href="/arda/">Arda Akkaya</a></li>
+    <li><a href="/vhk/">Ventilheizk&ouml;rper &ndash; alle Gr&ouml;&szlig;en und Preise</a></li>
+  </ul>
+  <p>Oder direkt anrufen: <a href="tel:+491726343979">+49 172 6343979</a></p>
+</div>
+</body>
+</html>
